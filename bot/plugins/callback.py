@@ -1608,7 +1608,7 @@ async def cb_about(bot, update: CallbackQuery):
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/jintons"
+                    "My Dev ⚡", url="https://t.me/Rocky23901"
                 ),
                 
             InlineKeyboardButton
