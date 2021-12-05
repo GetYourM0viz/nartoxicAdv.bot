@@ -24,16 +24,16 @@ async def start(bot, update):
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text=""" <b> ⚠️ YOU ARE NOT SUBSCRIBED OUR CHANNEL⚠️
+                text=""" <b>  YOU ARE NOT MEMBER OF MY CHANNEL: @REQUEST_MOvizz
 
-Join on our channel to get movies ✅
+Join on our channel to get Diret File✅
 
 
 
 
 ⬇️Channel link⬇️ </b>""",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="⚡ Join My Channel⚡️", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="⚡ Join THIS Channel⚡️", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
@@ -63,7 +63,7 @@ Join on our channel to get movies ✅
                         [
                             InlineKeyboardButton
                                 (
-                                    'JOIN US ', url="https://t.me/TEAM_TMW"
+                                    'JOIN US ', url="https://t.me/REQUEST_MOvizz"
                                 )
                         ]
                     ]
@@ -82,7 +82,7 @@ Join on our channel to get movies ✅
                         [
                             InlineKeyboardButton
                                 (
-                                    'JOIN US', url="https://t.me/TEAM_TMW"
+                                    'JOIN US', url="https://t.me/REQUEST_MOvizz"
                                 )
                         ]
                     ]
@@ -101,7 +101,7 @@ Join on our channel to get movies ✅
                         [
                             InlineKeyboardButton
                                 (
-                                    'JOIN US ', url="https://t.me/TEAM_TMW"
+                                    'JOIN US ', url="https://t.me/REQUEST_MOvizz"
                                 )
                         ]
                     ]
@@ -114,8 +114,8 @@ Join on our channel to get movies ✅
         return
 
     buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/TEAM_TMW'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://t.me/https://t.me/REQUEST_MOviz')],                               
+        InlineKeyboardButton('Developers', url='https://t.me/toxicmovies23'),
+        InlineKeyboardButton('SUPPORT CHANNEL', url ='https://t.me/https://t.me/REQUEST_MOvizz')],                               
      [
         InlineKeyboardButton('Support 🛠', url='https://t.me/toxicmovies23')
     ],[
