@@ -24,16 +24,15 @@ async def start(bot, update):
         except UserNotParticipant:
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
-                text=""" <b>  YOU ARE NOT MEMBER OF MY CHANNEL: @REQUEST_MOvizz
+                text=""" <b>YOU ARE NOT MEMBER OF MY BACKUP GROUP: @ToxicBackup™️
 
-Join on our channel to get Diret File✅
+Join on our channel to get Files 
 
+[Then Try Again From Respected Group]
 
-
-
-⬇️Channel link⬇️ </b>""",
+💝BACKUP GROUP LINK💝</b>""",
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="⚡ Join THIS Channel⚡️", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text="⚡JOIN BACKUP GROUP⚡", url=f"https://t.me/{update_channel}")]
               ])
             )
             return
