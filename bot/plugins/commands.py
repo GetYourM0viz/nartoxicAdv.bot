@@ -1,29 +1,49 @@
 #!/usr/bin/env python3
+
 # -*- coding: utf-8 -*-
+
 # (c) @AlbertEinsteinTG
 
 from pyrogram import filters, Client
+
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+
 from bot import Translation # pylint: disable=import-error
+
 from bot.database import Database # pylint: disable=import-error
+
 from pyrogram.errors import UserNotParticipant
+
 from bot import FORCESUB_CHANNEL
 
 db = Database()
 
 @Client.on_message(filters.command(["start"]) & filters.private, group=1)
+
 async def start(bot, update):
+
 #adding force subscribe option to bot
+
     update_channel = FORCESUB_CHANNEL
+
     if update_channel:
+
         try:
+
             user = await bot.get_chat_member(update_channel, update.chat.id)
+
             if user.status == "kicked":
-               await update.reply_text("🤭 Sorry Dude, You are **B A N N E D 🤣🤣🤣**")
+
+               await update.reply_text("🤭 Sorry Dude, You are B A N N E D 🤣🤣🤣")
+
                return
+
         except UserNotParticipant:
+
             #await update.reply_text(f"Join @{update_channel} To Use Me")
+
             await update.reply_text(
+
                 text=""" <b>YOU ARE NOT MEMBER OF MY BACKUP GROUP: @ToxicBackup™️
 
 Join on our channel to get Files 
@@ -31,25 +51,43 @@ Join on our channel to get Files
 [Then Try Again From Respected Group]
 
 💝BACKUP GROUP LINK💝</b>""",
+
                 reply_markup=InlineKeyboardMarkup([
-                    [ InlineKeyboardButton(text="⚡JOIN BACKUP GROUP⚡", url=f"https://t.me/{update_channel}")]
+
+                    [ InlineKeyboardButton(text=⚡JOIN BACKUP GROUP⚡", url=f"https://t.me/{update_channel}")]
+
               ])
+
             )
-            
-        return
-    try:
-        file_uid = update.command[1]
-    except IndexError:
-        file_uid = False
-    
-    if file_uid:
-        file_id, file_name, file_caption, file_type = await db.get_file(file_uid)
-        
-        if (file_id or file_type) == None:
+
             return
+
+    try:
+
+        file_uid = update.command[1]
+
+    except IndexError:
+
+        file_uid = False
+
+    
+
+    if file_uid:
+
+        file_id, file_name, file_caption, file_type = await db.get_file(file_uid)
+
         
+
+        if (file_id or file_type) == None:
+
+            return
+
+        
+
         caption = file_caption if file_caption != ("" or None) else ("<code>" + file_name + "</code>")
+
         
+
         if file_type == "document":
         
             await bot.send_document(
