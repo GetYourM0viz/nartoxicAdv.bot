@@ -54,7 +54,7 @@ Join on our channel to get Files
 
                 reply_markup=InlineKeyboardMarkup([
 
-                    [ InlineKeyboardButton(text=⚡JOIN BACKUP GROUP⚡", url=f"https://t.me/{update_channel}")]
+                    [ InlineKeyboardButton(text= "⚡JOIN BACKUP GROUP⚡", url=f"https://t.me/{update_channel}")]
 
               ])
 
