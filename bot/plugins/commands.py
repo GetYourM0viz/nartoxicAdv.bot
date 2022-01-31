@@ -35,22 +35,7 @@ Join on our channel to get Files
                     [ InlineKeyboardButton(text="⚡JOIN BACKUP GROUP⚡", url=f"https://t.me/{update_channel}")]
               ])
             )
-            if message.command[1] != "subscribe":
-
-            btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{message.command[1]}")])
-
-        await client.send_message(
-
-            chat_id=message.from_user.id,
-
-            text="**Please Join My Updates Channel to use this Bot!**",
-
-            reply_markup=InlineKeyboardMarkup(btn),
-
-            parse_mode="markdown"
-
-            )
-
+            
         return
     try:
         file_uid = update.command[1]
